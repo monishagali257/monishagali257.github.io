@@ -38,22 +38,55 @@
       color: #555;
       line-height: 1.5;
     }
-    .project {
+    .achievement {
       margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
     }
-    .project h3 {
+    .achievement h3 {
       margin: 0;
       font-size: 20px;
       color: #333;
     }
-    a {
-      color: #333;
-      text-decoration: none;
+    .achievement p {
+      margin-bottom: 10px;
     }
-    a:hover {
-      text-decoration: underline;
+    .achievement img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+    .progress-bar {
+      width: 100%;
+      background-color: #f2f2f2;
+      height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #3b8eff;
+      transition: width 0.5s ease-in-out;
+    }
+    .hidden-content {
+      display: none;
     }
   </style>
+  <script>
+    function unlockAchievement(achievementId) {
+      const achievement = document.getElementById(achievementId);
+      const hiddenContent = achievement.querySelector('.hidden-content');
+      const progressBarFill = document.getElementById('progress-bar-fill');
+      
+      hiddenContent.style.display = 'block';
+      achievement.classList.add('unlocked');
+      
+      const achievementsUnlocked = document.querySelectorAll('.achievement.unlocked').length;
+      const progressPercentage = (achievementsUnlocked / 6) * 100; // Update the denominator as per your total achievements count
+      
+      progressBarFill.style.width = progressPercentage + '%';
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -65,19 +98,30 @@
       Welcome to my data engineering portfolio! I'm a data engineer with expertise in various technologies and tools. I specialize in designing and implementing scalable data solutions to solve complex problems.
     </p>
 
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Description of Project 1</p>
-      <p>Technologies used: Technology A, Technology B</p>
-      <p>Outcome/Result: Achievements or results</p>
+    <h2>Achievements</h2>
+    <div class="achievement" id="achievement1">
+      <h3>Achievement 1</h3>
+      <p>Description of Achievement 1</p>
+      <p>Requirements: Explain the requirements to unlock</p>
+      <button onclick="unlockAchievement('achievement1')">Unlock</button>
+      <div class="hidden-content">
+        <p>Additional information or unlocked content for Achievement 1</p>
+      </div>
     </div>
 
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>Description of Project 2</p>
-      <p>Technologies used: Technology C, Technology D</p>
-      <p>Outcome/Result: Achievements or results</p>
+    <div class="achievement" id="achievement2">
+      <h3>Achievement 2</h3>
+      <p>Description of Achievement 2</p>
+      <p>Requirements: Explain the requirements to unlock</p>
+      <button onclick="unlockAchievement('achievement2')">Unlock</button>
+      <div class="hidden-content">
+        <p>Additional information or unlocked content for Achievement 2</p>
+      </div>
+    </div>
+
+    <h2>Progress</h2>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progress-bar-fill"></div>
     </div>
 
     <h2>Contact Me</h2>
