@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Engineer Portfolio</title>
+  <title>Data Engineer Portfolio - Storytelling</title>
   <style>
     /* Custom CSS styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('background.jpg'); /* Add your background image path here */
-      background-size: cover;
-      background-position: center;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
@@ -26,129 +23,79 @@
     }
     main {
       margin: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: #f9f9f9;
       padding: 20px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
     }
-    h2 {
-      margin-top: 0;
+    .story {
+      margin-bottom: 40px;
+    }
+    .story h2 {
+      margin-bottom: 10px;
       font-size: 24px;
       color: #333;
     }
-    p {
+    .story p {
+      margin-bottom: 10px;
       color: #555;
       line-height: 1.5;
     }
-    .achievement {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
-    .achievement h3 {
-      margin: 0;
-      font-size: 20px;
-      color: #333;
-    }
-    .achievement p {
+    .story img {
+      max-width: 100%;
       margin-bottom: 10px;
     }
-    .achievement img {
-      max-width: 100px;
-      margin-right: 10px;
-    }
-    .progress-bar {
-      width: 100%;
-      background-color: #f2f2f2;
-      height: 20px;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-    .progress-bar-fill {
-      height: 100%;
-      background-color: #3b8eff;
-      transition: width 0.5s ease-in-out;
-    }
-    .hidden-content {
-      display: none;
-    }
-    .visualization {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .visualization img {
-      max-width: 100%;
-    }
   </style>
-  <script>
-    function unlockAchievement(achievementId) {
-      const achievement = document.getElementById(achievementId);
-      const hiddenContent = achievement.querySelector('.hidden-content');
-      const progressBarFill = document.getElementById('progress-bar-fill');
-      
-      hiddenContent.style.display = 'block';
-      achievement.classList.add('unlocked');
-      
-      const achievementsUnlocked = document.querySelectorAll('.achievement.unlocked').length;
-      const progressPercentage = (achievementsUnlocked / 6) * 100; // Update the denominator as per your total achievements count
-      
-      progressBarFill.style.width = progressPercentage + '%';
-    }
-  </script>
 </head>
 <body>
   <header>
     <h1>Data Engineer Portfolio</h1>
   </header>
   <main>
-    <h2>About Me</h2>
-    <p>
-      Welcome to my data engineering portfolio! I'm a data engineer with expertise in various technologies and tools. I specialize in designing and implementing scalable data solutions to solve complex problems.
-    </p>
-
-    <h2>Achievements</h2>
-    <div class="achievement" id="achievement1">
-      <h3>Achievement 1</h3>
-      <p>Description of Achievement 1</p>
-      <p>Requirements: Explain the requirements to unlock</p>
-      <button onclick="unlockAchievement('achievement1')">Unlock</button>
-      <div class="hidden-content">
-        <p>Additional information or unlocked content for Achievement 1</p>
-      </div>
+    <div class="story">
+      <h2>Chapter 1: Introduction</h2>
+      <p>
+        Welcome to my data engineering portfolio! In this storytelling format, I will take you through my journey as a data engineer, showcasing my skills, projects, and achievements.
+      </p>
+      <img src="chapter1-image.jpg" alt="Chapter 1 Image">
     </div>
 
-    <div class="achievement" id="achievement2">
-      <h3>Achievement 2</h3>
-      <p>Description of Achievement 2</p>
-      <p>Requirements: Explain the requirements to unlock</p>
-      <button onclick="unlockAchievement('achievement2')">Unlock</button>
-      <div class="hidden-content">
-        <p>Additional information or unlocked content for Achievement 2</p>
-      </div>
+    <div class="story">
+      <h2>Chapter 2: Early Days</h2>
+      <p>
+        In the early days of my career, I developed a strong foundation in data engineering by working on various projects and learning different technologies. I gained expertise in data processing, ETL pipelines, and database management.
+      </p>
+      <p>
+        <a href="chapter2-details.html">Read more about my early days</a>
+      </p>
     </div>
 
-    <h2>Progress</h2>
-    <div class="progress-bar">
-      <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    <div class="story">
+      <h2>Chapter 3: Solving Big Data Challenges</h2>
+      <p>
+        As my experience grew, I tackled more complex challenges in handling big data. I implemented distributed processing frameworks, optimized data pipelines, and designed scalable architectures to handle massive data volumes.
+      </p>
+      <img src="chapter3-image.jpg" alt="Chapter 3 Image">
     </div>
 
-    <h2>Data Visualizations</h2>
-    <div class="visualization">
-      <h3>Visualization 1</h3>
-      <img src="visualization1.jpg" alt="Visualization 1">
+    <div class="story">
+      <h2>Chapter 4: Impactful Projects</h2>
+      <p>
+        Throughout my career, I've worked on several impactful projects that made a difference in various industries. From improving data quality and accuracy to enabling data-driven decision-making, my projects have delivered tangible results.
+      </p>
+      <p>
+        <a href="chapter4-details.html">Explore my impactful projects</a>
+      </p>
     </div>
 
-    <div class="visualization">
-      <h3>Visualization 2</h3>
-      <img src="visualization2.jpg" alt="Visualization 2">
+    <div class="story">
+      <h2>Chapter 5: Future Endeavors</h2>
+      <p>
+        Looking ahead, I'm excited about exploring emerging technologies and advancements in the field of data engineering. I aim to continue pushing the boundaries and delivering innovative solutions to complex data problems.
+      </p>
+      <img src="chapter5-image.jpg" alt="Chapter 5 Image">
     </div>
-
-    <h2>Contact Me</h2>
-    <p>
-      Feel free to reach out to me for any data engineering opportunities or collaborations. You can contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>.
-    </p>
   </main>
 </body>
 </html>
+
